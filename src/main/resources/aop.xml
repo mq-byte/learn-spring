@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean name="per" class="com.qlq.learn.Person">
+        <property name="age" value="55" ></property>
+    </bean>
+    <bean name="asp" class="com.qlq.learn.Aspect"></bean>
+    <aop:config>
+        <aop:pointcut id="aaa" expression="execution(* com.qlq.learn.*Person.asp())"></aop:pointcut>
+        <aop:aspect ref="asp">
+            <aop:before method="sy" pointcut-ref="aaa"></aop:before>
+        </aop:aspect>
+    </aop:config>
+</beans>

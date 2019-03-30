@@ -1,0 +1,8 @@
+*.iml
+.idea/
+uap-page/nginx/logs/
+**/target/
+.vscode
+.settings
+.git
+.project
