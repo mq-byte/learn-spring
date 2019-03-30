@@ -262,7 +262,7 @@ public class MyAspectAnno {
 
 
 
-#spring JDBC
+# spring JDBC
 ### bean配置连接
 ```xml
 <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
